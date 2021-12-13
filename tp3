@@ -66,3 +66,4 @@ if apt list --install | grep -q "sudoku"; then echo "INSTALLE"; else echo "NON I
 
 
 
+
