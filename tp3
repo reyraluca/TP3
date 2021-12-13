@@ -1,0 +1,68 @@
+# tp3
+
+# exercice 1
+
+1.
+sudo apt update
+sudo apt upgrade
+
+2.
+alias maj='sudo pat upgrade && sudo at upgrade'
+
+# pour qu'il sois efectuer au demarrage on le met dans bashrc
+
+3.
+tail -n 5 /var/log/dpkg.log
+
+4.
+cat  /var/log/apt/history.log
+
+5.
+dpkg --get-selections | wc -l
+
+sudo apt list --installed | wc -l
+
+il y a une difference de 1 paquet car dpkg est installer dans apt
+
+il y a des igne de statut avec dpkg.log du coup ça rajoute enorment de ligne qui ne nous intéresse pas forcement pour la question
+
+6.
+apt list | wc -l
+
+
+7.
+glances :
+Glances est un outil de surveillance qui donne beaucoup d'informations sur notre pc.
+L'information s'adapte dynamiquement a la fenetre. 
+
+tldr:
+c'est une alternative au page man car ça donne la documentation
+
+hollywood:
+on se croirez au cinema
+
+8.
+sudo apt install sudoku
+ça permet de jouer au sudoku
+
+
+# exercice 2
+dpkg -S ls 
+
+dpkg -S marche pour n'importe quelle programme
+
+#!/bin/bash
+
+commande=$1
+
+for path in $commande; do
+dpkg -S $(which -a $path)
+done
+
+
+#exercice 3
+if apt list --install | grep -q "sudoku"; then echo "INSTALLE"; else echo "NON INSTALLE"; fl
+
+
+
+
